@@ -1,4 +1,4 @@
-module.export = {
+module.exports = {
   extends: [
     'airbnb-typescript',
     'airbnb/hooks',
@@ -12,12 +12,7 @@ module.export = {
     ecmaVersion: 7,
     project: './tsconfig.json',
   },
-  plugins: [
-    '@typescript-eslint',
-    'import',
-    'unused-imports',
-    'prettier',
-  ],
+  plugins: ['@typescript-eslint', 'import', 'unused-imports', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-props-no-spreading': 0,
@@ -40,6 +35,7 @@ module.export = {
       },
     ],
   },
+  ignorePatterns: ['.eslintrc.js'],
   settings: {
     'import/resolver': {
       typescript: {},
